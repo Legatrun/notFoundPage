@@ -1,0 +1,128 @@
+.containerNotFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    word-spacing: 1rem;
+}
+
+/* notFound text */
+.notFound {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Text center */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerText {
+    width: 400px;
+    padding: 2rem;
+}
+
+button {
+    text-transform: uppercase;
+    background-color: #ff6600;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.parrafo {
+    margin: 2rem 0;
+    word-spacing: 1rem;
+}
+
+
+
+
+/* Image */
+
+.containerImage {
+    position: relative;
+    display: flex;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
+}
+
+.containerImage .boxImage {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    margin: 0 20px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff6600, 25%,
+            #774270 25%, #774270 50%, #ff6600 50%, #ff6600 75%,
+            #774270 75%, #774270 100%);
+
+    background-size: 40px 40px;
+    filter: grayscale(1);
+    animation: animateBg 0.5s linear infinite;
+    animation-play-state: paused;
+    transition: filter 1s;
+    display: flex;
+    justify-content: center;
+}
+
+.containerImage .boxImage:hover {
+    animation-play-state: running;
+    filter: grayscale(0);
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 40px;
+    }
+}
+
+.containerImage .boxImage img {
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    transition: height 0.5s;
+}
+
+.containerImage .boxImage:hover img {
+    height: 480px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .containerText {
+        width: 100%;
+    }
+
+
+    .containerImage .boxImage {
+        width: 200px;
+        height: 270px;
+    }
+}
